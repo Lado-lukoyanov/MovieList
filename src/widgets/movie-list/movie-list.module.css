@@ -1,0 +1,15 @@
+.movieContentContainer {
+  margin-inline: auto;
+  max-width: 1312px;
+  .title {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .movieContent {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 26px;
+  }
+}
