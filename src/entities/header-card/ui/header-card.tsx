@@ -1,15 +1,16 @@
 import styles from "./header-card.module.css";
 
+import type { MouseEvent } from "react";
+
 type HeaderCardProps = {
   imgUrl: string;
-  title: string;
+  onClick: (event: MouseEvent<HTMLButtonElement>) => void;
 };
 
-export const HeaderCard = ({ imgUrl, title }: HeaderCardProps) => {
+export const HeaderCard = ({ imgUrl, onClick }: HeaderCardProps) => {
   return (
-    <article className={styles.headerCard}>
+    <article onClick={onClick} className={styles.previewCard}>
       <img className={styles.image} src={imgUrl} alt="filmPoster" />
-      <h2>{title}</h2>
     </article>
   );
 };

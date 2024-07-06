@@ -25,6 +25,8 @@ export type Films = {
   ratingChange: string;
   isRatingUp: string;
   isAfisha: number;
+  description: string;
+  coverUrl: string;
 };
 
 type Genres = {

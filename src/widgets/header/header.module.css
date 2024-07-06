@@ -1,4 +1,54 @@
-.headerContent {
-  display: flex;
-  max-width: 1512px;
+.previewContent {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень */
+  height: 775px;
+  margin-bottom: 40px;
+  .imagePreview {
+    padding: 20px;
+    display: flex;
+    height: 500px;
+    position: relative;
+
+    overflow: hidden;
+  }
+
+  .list {
+    display: flex;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 10px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+  }
+
+  .image {
+    object-fit: cover;
+    border-radius: 20px;
+    max-height: 100%;
+    max-width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .previewTitle {
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: white;
+    font-size: 40px;
+  }
+
+  .info {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
 }

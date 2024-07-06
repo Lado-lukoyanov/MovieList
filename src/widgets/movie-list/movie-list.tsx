@@ -11,7 +11,6 @@ type MovieListProps = {
 
 export const MovieList = ({ movieType, title }: MovieListProps) => {
   const { data } = useGetMovie(movieType);
-  console.log(data?.films);
 
   return (
     <div className={styles.movieContentContainer}>
@@ -20,8 +19,9 @@ export const MovieList = ({ movieType, title }: MovieListProps) => {
         <h2>Посмотреть все</h2>
       </div>
       <div className={styles.movieContent}>
-        {data?.films.slice(0, 4).map(({ nameRu, year, filmLength, posterUrlPreview }) => (
+        {data?.films.slice(0, 4).map(({ kinopoiskId, nameRu, year, filmLength, posterUrlPreview }) => (
           <MovieCard
+            key={kinopoiskId}
             posterUrlPreview={posterUrlPreview}
             nameRu={nameRu}
             year={year}
